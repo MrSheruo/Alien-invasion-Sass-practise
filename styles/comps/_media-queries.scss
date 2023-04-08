@@ -1,0 +1,29 @@
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+@mixin smoothWalk {
+  @keyframes smoothWalk {
+    25% {
+      transform: translate(0px, 0px);
+      // transform-origin: 50% 50%;
+    }
+    50% {
+      transform: translate(-20px, -20px);
+      // transform: rotate(-6deg);
+    }
+    75% {
+      transform: translate(20px, 20px);
+      // transform: rotate(6deg);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+}

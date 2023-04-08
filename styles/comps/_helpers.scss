@@ -1,0 +1,11 @@
+%align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Container {
+  padding-top: 15.625rem;
+  padding-inline: 3.75rem;
+  @extend %align-center;
+}

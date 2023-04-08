@@ -1,0 +1,50 @@
+#who-are-we {
+  @include tablet {
+    flex-direction: column;
+  }
+  & .who-left {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+    & img {
+      width: 60%;
+      margin-left: 10%;
+      border-radius: 50%;
+      animation: smoothWalk 10s ease-in-out infinite both;
+
+      @include tablet {
+        width: 100%;
+        margin: 0px;
+      }
+    }
+  }
+  & .who-right {
+    width: 50%;
+
+    @include tablet {
+      width: 100%;
+      margin-top: 2rem;
+    }
+    & p {
+      color: $lime;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      line-height: 1.2;
+      @include tablet {
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+      @include mobile {
+        font-size: 0.7rem;
+        line-height: 1.2;
+      }
+      & a,
+      span {
+        color: $orangeRed;
+      }
+    }
+  }
+}
+
+@include smoothWalk();
